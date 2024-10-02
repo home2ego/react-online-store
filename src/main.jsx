@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { useState } from 'react';
+import StoreFront from './StoreFront';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -7,6 +8,7 @@ function App() {
   if (loggedIn) {
     return (
       <>
+        <StoreFront />
         <button className="btn btn-outline" onClick={() => setLoggedIn(false)}>
           Logout
         </button>
